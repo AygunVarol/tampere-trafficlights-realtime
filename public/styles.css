@@ -1,0 +1,45 @@
+:root {
+  --bg: #0b1220;
+  --panel: #111a2c;
+  --muted: #7a8799;
+  --text: #e6edf7;
+  --accent: #4da3ff;
+  --green: #29a745;
+  --yellow: #ffc107;
+  --red: #dc3545;
+  --gray: #6c757d;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+
+header {
+  display: flex; align-items: baseline; gap: 16px; padding: 12px 16px; background: var(--panel); border-bottom: 1px solid #1e2b42;
+}
+h1 { font-size: 18px; margin: 0; letter-spacing: 0.2px; }
+#status { color: var(--muted); font-size: 13px; display: flex; gap: 14px; }
+#status #conn { padding: 2px 8px; border-radius: 999px; background: #12223d; color: var(--accent); }
+
+main { display: grid; grid-template-columns: 1fr 280px; height: calc(100% - 96px); }
+#map { height: 100%; }
+#legend { background: var(--panel); padding: 12px; border-left: 1px solid #1e2b42; overflow: auto; }
+#legend h3 { margin: 4px 0 8px; font-size: 14px; font-weight: 600; }
+#legend ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+#legend li { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+.dot { width: 10px; height: 10px; display: inline-block; border-radius: 999px; border: 1px solid rgba(255,255,255,.35); }
+.dot.green { background: var(--green); }
+.dot.yellow { background: var(--yellow); }
+.dot.red { background: var(--red); }
+.dot.gray { background: var(--gray); }
+
+footer { height: 64px; display: flex; align-items: center; padding: 0 16px; color: var(--muted); border-top: 1px solid #1e2b42; background: var(--panel); }
+pre { margin: 0; white-space: pre-wrap; word-break: break-word; font-size: 12px; color: var(--muted); }
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip { background: #0f182b; color: var(--text); }
+.leaflet-container { background: #0c1426; }
+
+/* Marker chips */
+.marker-chip {
+  width: 16px; height: 16px; border-radius: 999px; border: 2px solid rgba(0,0,0,.35);
+  box-shadow: 0 0 0 2px rgba(0,0,0,.25);
+}

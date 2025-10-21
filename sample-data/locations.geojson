@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "name": "tampere_sample_locations",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "id": "INT-1", "name": "Hämeenkatu & Hämeenpuisto" },
+      "geometry": { "type": "Point", "coordinates": [23.7486, 61.4972] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "INT-2", "name": "Hämeenkatu & Rautatienkatu" },
+      "geometry": { "type": "Point", "coordinates": [23.7699, 61.4984] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "id": "INT-3", "name": "Satakunnankatu & Näsilinnankatu" },
+      "geometry": { "type": "Point", "coordinates": [23.7601, 61.5016] }
+    }
+  ]
+}

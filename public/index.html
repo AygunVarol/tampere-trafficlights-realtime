@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tampere Traffic Lights – Realtime</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🚦 Tampere Traffic Lights – Realtime</h1>
+    <div id="status">
+      <span id="conn">connecting…</span>
+      <span id="lastUpdate"></span>
+    </div>
+  </header>
+
+  <main>
+    <div id="map"></div>
+    <aside id="legend">
+      <h3>Legend (GRINT)</h3>
+      <ul>
+        <li><span class="dot green"></span> Green states (1,3–8,10)</li>
+        <li><span class="dot yellow"></span> Amber/Transition (10–12,14)</li>
+        <li><span class="dot red"></span> Red states (0,9,13,15–26)</li>
+        <li><span class="dot gray"></span> Unknown/No data</li>
+      </ul>
+      <div class="cfg">
+        <details>
+          <summary>Config</summary>
+          <pre id="cfg"></pre>
+        </details>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <small>
+      Map © OpenStreetMap contributors • Leaflet UI • States mapped via GRINT/DINT definitions.<br/>
+      Data source: City of Tampere traffic lights API (proxied).
+    </small>
+  </footer>
+
+  <script src="./grint.js"></script>
+  <script src="./adapters.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
